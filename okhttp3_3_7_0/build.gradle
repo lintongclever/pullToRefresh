@@ -1,0 +1,73 @@
+apply plugin: 'com.android.library'
+android {
+//    compileSdkVersion rootProject.ext.compileSdkVersion
+//    buildToolsVersion rootProject.ext.buildToolsVersion
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+
+    defaultConfig {
+//        minSdkVersion rootProject.ext.minSdkVersion
+//        targetSdkVersion rootProject.ext.targetSdkVersion
+        minSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //依赖的okio版本
+    compile 'com.squareup.okio:okio:1.12.0'
+}
+
+//将publicsuffixes.gz拷贝到最终(aar)的jar中
+task myCopyTask(type:Copy){
+    println("okhttp copyTask被执行了")
+    from('src/main')
+    into("build/intermediates/classes/release")
+    include('publicsuffixes.gz')
+    println("okhttp copyTask 执行成功")
+}
+
+//在task被添加的时候定义依赖关系
+tasks.whenTaskAdded {
+    task ->
+        println("新增的task.name="+task.name)
+        if (task.name.equals("transformClassesAndResourcesWithSyncLibJarsForRelease")||task.name.equals("bundleRelease")) {
+//            myCopyTask.dependsOn assembleRelease
+            task.doFirst {
+                println("assembleRelease 开始执行了")
+         def gzFile="src/main/publicsuffixes.gz"
+         def intoDir="build/intermediates/classes/release/"
+
+
+        //copy task
+        copy{
+            from gzFile
+            into intoDir
+            println("copy task执行完成")
+         }
+            }
+        }
+}
+

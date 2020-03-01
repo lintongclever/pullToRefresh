@@ -1,0 +1,25 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\androiddemo\Android-PullToRefresh-master\PullRefreshLibrary-master\AndroidManifest.xml:2:1-11:12
+INJECTED from D:\androiddemo\Android-PullToRefresh-master\PullRefreshLibrary-master\AndroidManifest.xml:2:1-11:12
+INJECTED from D:\androiddemo\Android-PullToRefresh-master\PullRefreshLibrary-master\AndroidManifest.xml:2:1-11:12
+INJECTED from D:\androiddemo\Android-PullToRefresh-master\PullRefreshLibrary-master\AndroidManifest.xml:2:1-11:12
+INJECTED from D:\androiddemo\Android-PullToRefresh-master\PullRefreshLibrary-master\AndroidManifest.xml:2:1-11:12
+INJECTED from D:\androiddemo\Android-PullToRefresh-master\PullRefreshLibrary-master\AndroidManifest.xml:2:1-11:12
+INJECTED from D:\androiddemo\Android-PullToRefresh-master\PullRefreshLibrary-master\AndroidManifest.xml:2:1-11:12
+	package
+		ADDED from D:\androiddemo\Android-PullToRefresh-master\PullRefreshLibrary-master\AndroidManifest.xml:3:5-49
+		INJECTED from D:\androiddemo\Android-PullToRefresh-master\PullRefreshLibrary-master\AndroidManifest.xml
+		INJECTED from D:\androiddemo\Android-PullToRefresh-master\PullRefreshLibrary-master\AndroidManifest.xml
+	android:versionName
+		ADDED from D:\androiddemo\Android-PullToRefresh-master\PullRefreshLibrary-master\AndroidManifest.xml:5:5-32
+		INJECTED from D:\androiddemo\Android-PullToRefresh-master\PullRefreshLibrary-master\AndroidManifest.xml
+		INJECTED from D:\androiddemo\Android-PullToRefresh-master\PullRefreshLibrary-master\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\androiddemo\Android-PullToRefresh-master\PullRefreshLibrary-master\AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from D:\androiddemo\Android-PullToRefresh-master\PullRefreshLibrary-master\AndroidManifest.xml:4:5-31
+		INJECTED from D:\androiddemo\Android-PullToRefresh-master\PullRefreshLibrary-master\AndroidManifest.xml
+		INJECTED from D:\androiddemo\Android-PullToRefresh-master\PullRefreshLibrary-master\AndroidManifest.xml
+application
+ADDED from D:\androiddemo\Android-PullToRefresh-master\PullRefreshLibrary-master\AndroidManifest.xml:9:5-20

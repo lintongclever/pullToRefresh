@@ -1,2 +1,1 @@
-# pullToRefresh
-上拉，下拉刷新
+# pull2Refresh
